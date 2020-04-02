@@ -27,13 +27,30 @@ export default {
     padding-top: 50px;
   }
   .content{
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     height: 700px;
     width: 1100px;
     margin-left: 50px;
-    margin: auto auto auto 150px;
-   color: grey;
+    margin: auto;
+    color: grey;
     overflow: auto; 
     border-radius: 5px;
   }
+
+  ::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(102, 102, 102); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: #888;  */
+  background: chartreuse;
+}
+
+
 </style>

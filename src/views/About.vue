@@ -28,12 +28,12 @@ a:hover{
 
 
 h3 {
-  color: black;
+  color: white;
   margin: 15px 0 0;
   
 }
 h2{
-  color: black;
+  color: rgb(177, 177, 177);
 }
 
 ul{
@@ -42,5 +42,9 @@ ul{
 }
 .about{
  padding-top: 50px;
+ text-align: center;
+}
+img{
+  padding-right: 100px;
 }
 </style>

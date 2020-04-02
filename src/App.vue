@@ -12,34 +12,40 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
 *{
   padding: 0;
   margin: 0;
+   background-color: #2a3439;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  
+  font-family: 'Orbitron', sans-serif, monospace;
+  letter-spacing: 2px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  
   color: #2c3e50;
-  background-image: url('./assets/bg.jpg');
+  /* background-image: url('./assets/bg.jpg');
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 
+  background-color: #2a3439;
+background-size: cover;
 }
 
 #nav {
   padding: 20px;
   float: left;
-  background-color:rgba(0, 0, 0, 0.5);
-  height: 95vh;
+  color: rgb(116, 116, 116);
+
 }
 
 #nav a {
   font-weight: bold;
-  color: #596168;
+  color: #687077;
   text-decoration-line: none;
   display: block;
 }

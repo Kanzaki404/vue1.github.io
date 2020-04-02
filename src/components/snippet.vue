@@ -7,7 +7,7 @@
         <div class="container">      
             <h2>Title</h2>
             <div class="content">
-                <p>Lorem ipsum dolor sit amet r sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicinr sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet cr sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officietur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officig elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officiconsectetur adipisicing elit. Eos provident vitae harum possimus officia perferendis quas dolorem hic ut praesentium itaque impedit aspernatur asperiores molestias animi odio, eligendi quod ipsam?</p>
+                <p>Lorem ipsum dom ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqlor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliquid quam minus? Numquam animi consequuntur ad beatae quasi consequatur, quisquam distinctio eos! Architecto temporibus dignissimos omnis?</p>
             </div>
             <button class="btn btn1">Vote Up</button>
             <button class="btn btn2">Vote Down</button>          
@@ -16,23 +16,7 @@
                 <p id="upvotes">+ 2</p>
                 <p id="downvotes">- 3</p>
             </div>        
-        </div>
-
-
-        <div class="container">      
-            <h2>Title</h2>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet r sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicinr sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet cr sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officietur adipisicing elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officig elit. Eos provident vitae harum possimus officir sit amet consectetur adipisicing elit. Eos provident vitae harum possimus officiconsectetur adipisicing elit. Eos provident vitae harum possimus officia perferendis quas dolorem hic ut praesentium itaque impedit aspernatur asperiores molestias animi odio, eligendi quod ipsam?</p>
-            </div>
-            <button class="btn btn1">Vote Up</button>
-            <button class="btn btn2">Vote Down</button>         
-            <button class="btn btn2 btnR">Delete</button>
-            <div class="rating">
-                <p id="upvotes">+ 2</p>
-                <p id="downvotes">- 3</p>
-            </div>            
-        </div>
-
+        </div>  
     </div>
 </template>
 
@@ -52,6 +36,7 @@ export default {
     }
     #downvotes{
         color: red;
+        
     }
     ul{
         list-style-type: none;
@@ -79,20 +64,20 @@ export default {
     }
     .container{
         width: 900px;
-        min-height:300px;
+        min-height:200px;
         height: auto;
-        
         margin: 50px auto 150px auto;
     }
 
     .content{
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: #2a3439;
         min-height:200px;
         height: 300px;
         width: 870px;
         margin: 50px auto 10px 10px;
         overflow: auto; 
         border: 1px solid chartreuse;
+        color: rgb(192, 192, 192);
         
     }
 
@@ -111,9 +96,9 @@ export default {
         float: left;
     }
     .btn1 {
-        background-color: transparent ;
+        background-color: #151a1c ;
         color: #4CAF50; 
-        border: 2px solid #4CAF50;
+        border: 1px solid #4CAF50;
     }
 
     .btn1:hover {
@@ -123,9 +108,9 @@ export default {
     }
 
     .btn2 {
-        background-color: transparent; 
+        background-color: #151a1c; 
         color: red; 
-        border: 2px solid red;
+        border: 1px solid red;
     }
 
     .btn2:hover {
@@ -142,4 +127,19 @@ export default {
     p{
         padding: 15px;
     }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(102, 102, 102); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: #888;  */
+  background: chartreuse;
+}
 </style>
