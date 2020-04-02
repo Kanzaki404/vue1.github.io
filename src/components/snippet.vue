@@ -5,6 +5,7 @@
                 <li><a href="#" @click="getLatest">Latest</a></li> |
                 <li><a href="#" @click="getMostUpvoted">Most Upvoted</a></li> 
             </ul> 
+            <div class="loader" v-if="snippets.length === 0"> Loading...</div>
             <div class="container" v-for="snippet in snippets" v-bind:key="snippet.id" >      
                 <h2>{{snippet.title}}</h2>
                 <div class="content">
@@ -35,12 +36,14 @@ export default {
     },
     methods: {
         getLatest(){
+            this.snippets = [];
             axios.get('https://www.forverkliga.se/JavaScript/api/api-snippets.php?latest')
             .then(res => this.snippets = res.data)
             .catch(err => console.log(err))
            
         },
         getMostUpvoted(){
+            this.snippets = [];
             axios.get('https://www.forverkliga.se/JavaScript/api/api-snippets.php?best')
             .then(res => this.snippets = res.data)
             .catch(err => console.log(err))
@@ -193,5 +196,67 @@ export default {
 ::-webkit-scrollbar-thumb {
   /* background: #888;  */
   background: chartreuse;
+}
+
+
+/**---------------------spinner Created by @lukehaas at https://projects.lukehaas.me/css-loaders/ ------------------------------------------------*/
+.loader,
+.loader:before,
+.loader:after {
+  background: #00ff00;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: #00ff00;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
 }
 </style>
