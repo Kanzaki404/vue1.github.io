@@ -46,18 +46,18 @@ export default {
            
         },
         getMostUpvoted(){
-            this.snippets = [];
+           this.snippets = [];
             axios.get('https://www.forverkliga.se/JavaScript/api/api-snippets.php?best')
             .then(res => this.snippets = res.data)
             .catch(err => console.log(err))
-            console.log(this.snippets)
+            //console.log(this.snippets)
         },
         getReported(){
             this.snippets = [];
              axios.get('https://www.forverkliga.se/JavaScript/api/api-snippets.php?reported')
             .then(res => this.snippets = res.data)
             .catch(err => console.log(err))
-            console.log(this.snippets)
+          //  console.log(this.snippets)
         },
         voteUp(id){ //something is wrong
             console.log('vote up called with id:' + id)
@@ -90,7 +90,7 @@ export default {
         //     axios.post(url, {unreport:'',id:id,tags:0})
         //     .then(res => console.log(res.data.message))
         //     .catch(err => console.log(err))
-        // }
+        // }  -----------------------------------------------------------Is_reported is not changing status?
 
     },
     created(){
