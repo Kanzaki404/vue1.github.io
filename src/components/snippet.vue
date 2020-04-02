@@ -1,28 +1,80 @@
 <template>
     <div>
-        <ul>
-            <li><a href="#">Latest</a></li> |
-            <li><a href="#">Most Upvoted</a></li> 
-        </ul> 
-        <div class="container">      
-            <h2>Title</h2>
-            <div class="content">
-                <p>Lorem ipsum dom ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqm ipsum dolor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliqlor sit amet consectetur adipisicing elit. Commodi natus quia reiciendis, cupiditate aliquid quam minus? Numquam animi consequuntur ad beatae quasi consequatur, quisquam distinctio eos! Architecto temporibus dignissimos omnis?</p>
-            </div>
-            <button class="btn btn1">Vote Up</button>
-            <button class="btn btn2">Vote Down</button>          
-            <button class="btn btn2 btnR">Delete</button>
-            <div class="rating">
-                <p id="upvotes">+ 2</p>
-                <p id="downvotes">- 3</p>
+       
+            <ul>
+                <li><a href="#" @click="getLatest">Latest</a></li> |
+                <li><a href="#" @click="getMostUpvoted">Most Upvoted</a></li> 
+            </ul> 
+            <div class="container" v-for="snippet in snippets" v-bind:key="snippet.id" >      
+                <h2>{{snippet.title}}</h2>
+                <div class="content">
+                    <p>{{snippet.content}}</p>
+                </div>
+                <button class="btn btn1" @click="voteUp(snippet.id)">Vote Up</button>
+                <button class="btn btn2" @click="voteDown(snippet.id)">Vote Down</button>          
+                <button class="btn btn2 btnR" @click="del(snippet.id)">Delete</button>
+                <div class="rating">
+                    <p id="Score">Score : {{snippet.score}}</p>
+                    <p id="id">ID: {{snippet.id}}</p>
             </div>        
-        </div>  
+        </div>
     </div>
+
 </template>
 
 <script>
+import axios from 'axios'
+const url = 'https://www.forverkliga.se/JavaScript/api/api-snippets.php?';
 export default {
-    name: 'Snippet'
+    
+    name: 'Snippet',
+    data(){
+        return {
+            snippets: []
+        }
+    },
+    methods: {
+        getLatest(){
+            axios.get('https://www.forverkliga.se/JavaScript/api/api-snippets.php?latest')
+            .then(res => this.snippets = res.data)
+            .catch(err => console.log(err))
+           
+        },
+        getMostUpvoted(){
+            axios.get('https://www.forverkliga.se/JavaScript/api/api-snippets.php?best')
+            .then(res => this.snippets = res.data)
+            .catch(err => console.log(err))
+            console.log(this.snippets)
+        },
+        voteUp(id){ //something is wrong
+            console.log('vote up called with id:' + id)
+            axios.post(url, { upvote:'', id:id})
+            .then(res => console.log(res.data.message))
+            .catch(err => console.log(err))
+          
+        },
+        voteDown(id){
+            console.log('vote down called with id:  ' + id)
+            axios.post(url,{downvote:'', id:id })
+            .then(res => console.log(res.data.message))
+            .catch(err => console.log(err))           
+        },
+        del(id){
+            console.log('delete called with id:  ' + id )
+            axios.post(url, {delete:'',id:id})
+            .then(res => console.log(res.data.message))
+            .catch(err => console.log(err))
+            
+        }
+
+    },
+    created(){
+            axios.get('https://www.forverkliga.se/JavaScript/api/api-snippets.php?latest')
+            .then(res => this.snippets = res.data)
+            .catch(err => console.log(err))
+            console.log(this.snippets)
+    }   
+
 }
 </script>
 
@@ -31,11 +83,11 @@ export default {
     .rating{
         display: flex;
     }
-    #upvotes{
+    #Score{
         color: chartreuse;
     }
-    #downvotes{
-        color: red;
+    #id{
+        color: chartreuse;
         
     }
     ul{
