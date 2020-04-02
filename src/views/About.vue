@@ -5,7 +5,7 @@
       <ul>
         <li><h2>EC Utbildning Vue Assignment 1 </h2></li>
         <li><h2>Student : Alexander Risteski</h2></li>
-        <li><h3>Github repository: <a target="_blank" rel="noopener noreferrer" href="https://www.w3schools.com/html/">TBA</a> </h3></li>
+        <li><h3>Github repository: <a target="_blank" rel="noopener noreferrer" href="https://github.com/Kanzaki404/vueAssig1.git">Here!</a> </h3></li>
       </ul>
       
       
