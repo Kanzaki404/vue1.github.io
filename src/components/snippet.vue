@@ -3,7 +3,8 @@
        
             <ul>
                 <li><a href="#" @click="getLatest">Latest</a></li> |
-                <li><a href="#" @click="getMostUpvoted">Most Upvoted</a></li> 
+                <li><a href="#" @click="getMostUpvoted">Most Upvoted</a></li> |
+                <li><a href="#" @click="getReported">Get Reported</a></li>
             </ul> 
             <div class="loader" v-if="snippets.length === 0"> Loading...</div>
             <div class="container" v-for="snippet in snippets" v-bind:key="snippet.id" >      
@@ -12,7 +13,9 @@
                     <p>{{snippet.content}}</p>
                 </div>
                 <button class="btn btn1" @click="voteUp(snippet.id)">Vote Up</button>
-                <button class="btn btn2" @click="voteDown(snippet.id)">Vote Down</button>          
+                <button class="btn btn2" @click="voteDown(snippet.id)">Vote Down</button>
+                <!-- <button v-if="snippet.tags === 0" class="btn btn2 btnR" @click="report(snippet.id)">Report</button>
+                <button v-else class="btn btn2 btnR" @click="unreport(snippet.id)">Unreport </button>           -->
                 <button class="btn btn2 btnR" @click="del(snippet.id)">Delete</button>
                 <div class="rating">
                     <p id="Score">Score : {{snippet.score}}</p>
@@ -49,6 +52,13 @@ export default {
             .catch(err => console.log(err))
             console.log(this.snippets)
         },
+        getReported(){
+            this.snippets = [];
+             axios.get('https://www.forverkliga.se/JavaScript/api/api-snippets.php?reported')
+            .then(res => this.snippets = res.data)
+            .catch(err => console.log(err))
+            console.log(this.snippets)
+        },
         voteUp(id){ //something is wrong
             console.log('vote up called with id:' + id)
             axios.post(url, { upvote:'', id:id})
@@ -68,7 +78,19 @@ export default {
             .then(res => console.log(res.data.message))
             .catch(err => console.log(err))
             
-        }
+        },
+        // report(id){
+        //     console.log('report called with id:  ' + id )
+        //     axios.post(url, {report:'',id:id,tags:1})
+        //     .then(res => console.log(res.data.message))
+        //     .catch(err => console.log(err))
+        // },
+        // unreport(id){
+        //     console.log('unreport called with id:  ' + id )
+        //     axios.post(url, {unreport:'',id:id,tags:0})
+        //     .then(res => console.log(res.data.message))
+        //     .catch(err => console.log(err))
+        // }
 
     },
     created(){
