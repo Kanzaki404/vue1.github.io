@@ -1,9 +1,9 @@
 <template>
     <div class="form">
-        <h2>Post new Snippet</h2>
+        <h3>Post new Snippet</h3>
         <form id="form1"> 
-            <input v-model="title" type="text" id="title" placeholder="Title">
-            <textarea v-model="content" name="content" id="content" cols="30" rows="20" placeholder="Content"></textarea>
+            <input v-model="title" type="text" id="title" placeholder="Title no less than 5 characters">
+            <textarea v-model="content" name="content" id="content" cols="30" rows="20" placeholder="Content no less than 15 characters"></textarea>
                
         </form>
          <div class="controls">
@@ -26,21 +26,27 @@ export default {
     },
     methods:{
         add(){
-            console.log('add called with id:  ' + this.title + '  and content: ' + this.content)
-            axios.post(url, { add:'', title: this.title, content: this.content})
-            .then(res => console.log(res.data.message))
-            .catch(err => console.log('Of course it dosent work' + err))
+            if(this.title.length < 5 && this.content.length < 15){
+                alert('Please follow the requirements')
+                }else{
+    
+                    console.log('add called with id:  ' + this.title + '  and content: ' + this.content)
+                    axios.post(url, { add:'', title: this.title, content: this.content})
+                    .then(res => console.log(res.data.message))
+                    .catch(err => console.log('Of course it dosent work' + err))
 
-           this.title = ''
-           this.content = ''
-        },
+                    this.title = ''
+                    this.content = ''
+                }
+            }
+        }
     }
-}
 </script>
 <style scoped>
 
-h2{
+h3{
     color: chartreuse;
+    padding-bottom:20px;
 }
 .form{
     padding: 20px;  

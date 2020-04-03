@@ -10,12 +10,19 @@
             <div class="container" v-for="snippet in snippets" v-bind:key="snippet.id" >      
                 <h2>{{snippet.title}}</h2>
                 <div class="content">
-                    <p>{{snippet.content}}</p>
+              
+                        <pre>
+                            <code>
+                                <p>{{snippet.content}}</p>
+                            </code>
+                        </pre>
+            
+                    
                 </div>
                 <button class="btn btn1" @click="voteUp(snippet.id)">Vote Up</button>
                 <button class="btn btn2" @click="voteDown(snippet.id)">Vote Down</button>
-                <!-- <button v-if="snippet.tags === 0" class="btn btn2 btnR" @click="report(snippet.id)">Report</button>
-                <button v-else class="btn btn2 btnR" @click="unreport(snippet.id)">Unreport </button>           -->
+                <button v-if="snippet.is_reported === 0" class="btn btn2 btnR" @click="report(snippet.id)">Report</button>
+                <button v-else class="btn btn2 btnR" @click="unreport(snippet.id)">Unreport </button>          
                 <button class="btn btn2 btnR" @click="del(snippet.id)">Delete</button>
                 <div class="rating">
                     <p id="Score">Score : {{snippet.score}}</p>
@@ -57,40 +64,65 @@ export default {
              axios.get('https://www.forverkliga.se/JavaScript/api/api-snippets.php?reported')
             .then(res => this.snippets = res.data)
             .catch(err => console.log(err))
-          //  console.log(this.snippets)
+           //console.log(this.snippets)
         },
-        voteUp(id){ //something is wrong
+        voteUp(id){ 
             console.log('vote up called with id:' + id)
+            this.snippets = []
             axios.post(url, { upvote:'', id:id})
-            .then(res => console.log(res.data.message))
+            .then(res => {console.log(res.data.message)
+                if(res !== null){
+                    this.getLatest();
+                } 
+            })
             .catch(err => console.log(err))
           
         },
         voteDown(id){
             console.log('vote down called with id:  ' + id)
+            this.snippets = []
             axios.post(url,{downvote:'', id:id })
-            .then(res => console.log(res.data.message))
+            .then(res => {console.log(res.data.message)
+                if(res !== null){
+                    this.getLatest();
+                }
+            })
             .catch(err => console.log(err))           
         },
         del(id){
             console.log('delete called with id:  ' + id )
+            this.snippets = []
             axios.post(url, {delete:'',id:id})
-            .then(res => console.log(res.data.message))
+            .then(res => {console.log(res.data.message)
+            if(res !== null){
+                this.getLatest();
+            }
+            })
             .catch(err => console.log(err))
             
         },
-        // report(id){
-        //     console.log('report called with id:  ' + id )
-        //     axios.post(url, {report:'',id:id,tags:1})
-        //     .then(res => console.log(res.data.message))
-        //     .catch(err => console.log(err))
-        // },
-        // unreport(id){
-        //     console.log('unreport called with id:  ' + id )
-        //     axios.post(url, {unreport:'',id:id,tags:0})
-        //     .then(res => console.log(res.data.message))
-        //     .catch(err => console.log(err))
-        // }  -----------------------------------------------------------Is_reported is not changing status?
+        report(id){
+            console.log('report called with id:  ' + id )
+            axios.post(url, {report:'',id:id})
+            .then(res => {console.log(res.data.message)
+            if(res !== null){
+                this.getLatest();
+            }
+            })
+            .catch(err => console.log(err))
+           window.relo
+        },
+        unreport(id){
+            console.log('unreport called with id:  ' + id )
+            axios.post(url, {unreport:'',id:id})
+            .then(res => {console.log(res.data.message)
+            if(res !== null){
+                this.getLatest();
+            }
+            })
+            .catch(err => console.log(err))
+            
+        }  
 
     },
     created(){
